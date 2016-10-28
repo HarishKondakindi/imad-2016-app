@@ -1,17 +1,33 @@
-<!doctype html>
-<html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am your webapp.whats app.
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
-</html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="page.css">
+</head>
+
+
+<body>
+<video id="backgroundvid" autoplay>
+	<source src="video1.mp4" type="video/mp4">
+</video>
+	<div id ="login">
+  <form action="login.php" method="POST">
+  	 <p>
+  	 	Username:
+  	 	<input type="text" name="username">
+  	 </p>
+
+  	 <p>
+  	 	Password:
+  	 	<input type="password" name="password">
+  	 </p>
+     <p>
+      
+   	 </p>
+  	 <p>
+  	 	<input type="submit" name="login" value="Login">
+      <input type="submit" name="register" value="Register">
+  	 </p>
+  </form>
+  
+</div>
+</body>
+
