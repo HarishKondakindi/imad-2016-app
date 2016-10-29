@@ -5,7 +5,14 @@ var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+// POST /login gets urlencoded bodies
+app.post('/login', urlencodedParser, function (req, res) {
+  if (!req.body) return res.sendStatus(400);
+  res.send('welcome, ' + req.body.username);
+});
 
 
 var config = {
