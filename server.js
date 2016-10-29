@@ -5,6 +5,19 @@ var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
+var bodyParser = require('body-parser');
+
+
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+app.post('/login', urlencodedParser, function (req, res) {
+  if (!req.body) 
+   return res.sendStatus(400);
+   else
+     res.send('welcome, ' + req.body.username);
+});
+
 
 
 var config = {
